@@ -1,9 +1,8 @@
 #header{
-    background-color: $colorBg;
     height: 9rem;
     width: 100%;
-    box-shadow: 0 10px 10px $colorDark;
-    z-index: 2;
+    @extend .bgSection;
+    z-index: 100;
     position: fixed;
     .header__nav{
         display: flex;
@@ -158,29 +157,45 @@
             }
             .header__nav-btnSinIn{
                 @media only screen and (max-width: 576px) {
-                    padding: $pd-05 $pd-10;
+                    padding: $pd-10 $pd-10;
                     margin-left: $mg-15;
                     span{
                         display: none;
                     }
-                    i{
+                    i{  
+                        display: block;
                         text-transform: uppercase;
                         letter-spacing: 2px;
-                        font-size: $fs-15;
+                        font-size: $fs-20;
                         background-color: transparent;
                     }
                 } 
                 @include MediaQuery (576px){
-                    padding: $pd-05 $pd-10;
+                    padding: $pd-10 $pd-15;
                     margin-left: $mg-15;
                     span{
                         display: none;
                     }
                     i{
+                        display: block;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: $fs-20;
+                        background-color: transparent;
+                    }
+                }
+                @include MediaQuery (768px){
+                    padding: $pd-10 $pd-25;
+                    margin-left: $mg-15;
+                    span{
+                        display: block;
                         text-transform: uppercase;
                         letter-spacing: 2px;
                         font-size: $fs-15;
                         background-color: transparent;
+                    }
+                    i{
+                        display: none;
                     }
                 }
                 @include MediaQuery (1200px){
@@ -203,6 +218,18 @@
             .header__nav-btnNav{
                 margin: $mg-25;
                 outline: none;
+                padding-left: $pd-15!important;
+                padding-right: $pd-15!important;
+                line-height: 20px;
+                @media only screen and (max-width: 576px) {
+                    padding: $pd-10 $pd-10;
+                    margin-left: $mg-15;
+                    i{  
+                        font-size: $fs-15;
+                        color: white;
+                        opacity: .8;
+                    }
+                } 
                 @include MediaQuery(992px){
                     display: block;
                 }
@@ -213,7 +240,7 @@
                     display: none;
                 }
                 i{
-                    font-size: $fs-30;
+                    font-size: $fs-20;
                     color: white;
                     opacity: .8;
                 }

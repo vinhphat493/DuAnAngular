@@ -1,1 +1,12 @@
-//Để những thứ kế thừa
+.bgCover {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 77rem;
+    width: 100%;
+}
+
+.bgSection{
+    box-shadow: 0 10px 10px $colorDark;
+    background-color: $colorBg
+}
