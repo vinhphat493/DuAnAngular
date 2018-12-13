@@ -14,6 +14,18 @@
                     @include text($colorText,$fs-25,500);
                     text-transform: uppercase;
                     position: relative;
+                    @include MediaQueryPhone($xs){
+                        font-size: $fs-15;
+                    }
+                    @include MediaQuery($xs){
+                        font-size: $fs-20;
+                    }
+                    @include MediaQuery($sm){
+                        font-size: $fs-25;
+                    }
+                    @include MediaQuery($md){
+                        font-size: $fs-25
+                    }
                     &::before{
                         content: '';
                         position: absolute;
@@ -32,7 +44,13 @@
                         -moz-transition: all 0.5s;
                         -ms-transition: all 0.5s;
                         -o-transition: all 0.5s;
+                        @include MediaQueryPhone($xs){
+                            bottom: -18px;
                         }
+                        @include MediaQuery($xs){
+                            bottom: -12px;
+                        }
+                    }
                     &:hover{
                         color : $colorPink;
                         &::before{
@@ -134,6 +152,33 @@
                    text-align: justify;
                    color: rgba($color: $colorWhite, $alpha: 0.7)
                }
+            }
+            @include MediaQueryPhone($xs){
+                padding: $pd-30 $pd-35;
+                .item__content{
+                    padding: $pd-10 0;
+                    .item-ThongTin{
+                        font-size: $fs-13;
+                    }
+                    .item-Name{
+                        font-size: $fs-15;
+                        font-weight: 700;
+                    }
+                }
+            }
+            @include MediaQuery($xs){
+                margin-top: $mg-35;
+            }
+            @include MediaQuery ($lg){
+                margin-top: $mg-25;
+            }
+        }
+        .content__list-item:first-child{
+            @include MediaQuery($xs){
+                margin-top: $mg-25
+            }
+            @include MediaQuery($lg){
+                margin-top: $mg-25
             }
         }
     }
